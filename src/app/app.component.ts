@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'data-binding-app';
+  counter:number = 0;
+  hide:boolean =true;
+
+  onPress(){
+    this.counter++;
+  }
+  ondblPress(){
+    console.log("image clicked");
+    if(this.hide == true)
+    {
+      this.hide = false;
+    }
+    else
+    {
+      this.hide = true;
+    }
+  }
 }
